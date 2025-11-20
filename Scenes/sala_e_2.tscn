@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://xtlj7osanapq"]
+[gd_scene load_steps=9 format=3 uid="uid://xtlj7osanapq"]
 
 [ext_resource type="Script" uid="uid://dpf2f5j24hucu" path="res://Scripts/sala_e_2.gd" id="1_8iquw"]
-[ext_resource type="Texture2D" uid="uid://bdub6ojimg0o2" path="res://assets/sala_esq_2.png" id="1_r3uiy"]
-[ext_resource type="Texture2D" uid="uid://psxcpn733aj6" path="res://icon.svg" id="2_mg233"]
+[ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_sjp7c"]
+[ext_resource type="Texture2D" uid="uid://dbvjwx3kikjre" path="res://assets/left_door1.png" id="3_xmbx1"]
+[ext_resource type="Texture2D" uid="uid://bx8nnfl7frjdj" path="res://assets/left_door2.png" id="4_hlinm"]
+[ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="5_sjp7c"]
+[ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="6_xmbx1"]
+[ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_jgq17"]
+[ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_6oh3s"]
 
 [node name="salaE2" type="Node2D"]
 script = ExtResource("1_8iquw")
@@ -15,17 +20,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_r3uiy")
+texture = ExtResource("2_sjp7c")
 
 [node name="continuar" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_top = 0.752
 anchor_bottom = 0.752
-offset_left = 12.0
-offset_top = -43.296
-offset_right = 140.0
-offset_bottom = 84.704
-texture_normal = ExtResource("2_mg233")
+offset_left = 6.0
+offset_top = -209.296
+offset_right = 198.0
+offset_bottom = 132.704
+texture_normal = ExtResource("3_xmbx1")
+texture_hover = ExtResource("4_hlinm")
 
 [node name="salaE1" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
@@ -33,12 +39,33 @@ anchor_left = 1.0
 anchor_top = 0.877
 anchor_right = 1.0
 anchor_bottom = 0.877
-offset_left = -139.0
-offset_top = -114.296
+offset_left = -203.0
+offset_top = -282.296
 offset_right = -11.0
-offset_bottom = 13.704
+offset_bottom = 59.704
 grow_horizontal = 0
-texture_normal = ExtResource("2_mg233")
+texture_normal = ExtResource("5_sjp7c")
+texture_hover = ExtResource("6_xmbx1")
+
+[node name="pilar1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(284, 454)
+scale = Vector2(1.3125, 1.23828)
+texture = ExtResource("7_jgq17")
+
+[node name="pilar2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(893, 453)
+scale = Vector2(1.3125, 1.23828)
+texture = ExtResource("7_jgq17")
+
+[node name="quadro1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(447, 215)
+scale = Vector2(0.686137, 0.682941)
+texture = ExtResource("8_6oh3s")
+
+[node name="quadro2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(697.938, 217.062)
+scale = Vector2(0.698209, 0.710882)
+texture = ExtResource("8_6oh3s")
 
 [connection signal="pressed" from="CanvasLayer/continuar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="CanvasLayer/salaE1" to="." method="_on_sala_e_1_pressed"]
