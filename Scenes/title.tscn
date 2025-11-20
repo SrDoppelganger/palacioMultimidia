@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjj57h8qwdl30"]
 
 [ext_resource type="Script" uid="uid://bofedwy68c25e" path="res://Scripts/title.gd" id="1_q2qps"]
-[ext_resource type="Texture2D" uid="uid://crm2nvflcdnjd" path="res://assets/title_bg.jpg" id="1_w31pl"]
-[ext_resource type="Texture2D" uid="uid://04g5vjyrf16m" path="res://assets/PALCIO-PALCIO-Multimdia.png" id="2_ekrfg"]
+[ext_resource type="Texture2D" uid="uid://cmr7y42kp2320" path="res://assets/PALCIO-PALCIO-Multimdia.png" id="2_ekrfg"]
+[ext_resource type="Texture2D" uid="uid://crm2nvflcdnjd" path="res://assets/BG/title_bg.jpg" id="2_q2qps"]
 [ext_resource type="FontFile" uid="uid://d2thbakf2hu5y" path="res://assets/fontes/pixel_operator/PixelOperator8.ttf" id="3_fp2oq"]
 
 [node name="Node2D" type="Node2D"]
@@ -16,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_w31pl")
+texture = ExtResource("2_q2qps")
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 10

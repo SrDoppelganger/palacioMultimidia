@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crm2nvflcdnjd"
-path="res://.godot/imported/title_bg.jpg-17a6ff8275d90d0c404c20eaf4f3fd2e.ctex"
+uid="uid://bdub6ojimg0o2"
+path="res://.godot/imported/sala_esq_2.png-9279e865a4796d02e72908295b7b49d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/title_bg.jpg"
-dest_files=["res://.godot/imported/title_bg.jpg-17a6ff8275d90d0c404c20eaf4f3fd2e.ctex"]
+source_file="res://assets/BG/sala_esq_2.png"
+dest_files=["res://.godot/imported/sala_esq_2.png-9279e865a4796d02e72908295b7b49d5.ctex"]
 
 [params]
 

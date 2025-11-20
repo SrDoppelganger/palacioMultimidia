@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6xdkdisbotbr"
-path="res://.godot/imported/sala_quiz_2.png-cd4504b53f469f3fa04ee68b0ed702a0.ctex"
+uid="uid://yxqcxy5sagb7"
+path="res://.godot/imported/right_door1.png-26da934ff20d2c04cdb953d05f00b78b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sala_quiz_2.png"
-dest_files=["res://.godot/imported/sala_quiz_2.png-cd4504b53f469f3fa04ee68b0ed702a0.ctex"]
+source_file="res://assets/right_door1.png"
+dest_files=["res://.godot/imported/right_door1.png-26da934ff20d2c04cdb953d05f00b78b.ctex"]
 
 [params]
 

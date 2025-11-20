@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmr7y42kp2320"
-path="res://.godot/imported/PALCIO-PALCIO-Multimdia.png-d3245b295271728591a53521bdc997c2.ctex"
+uid="uid://b5o701s3sc4d5"
+path="res://.godot/imported/right_door2.png-ee2eca89aa4cbc33c0d225b807563a59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PALCIO-PALCIO-Multimdia.png"
-dest_files=["res://.godot/imported/PALCIO-PALCIO-Multimdia.png-d3245b295271728591a53521bdc997c2.ctex"]
+source_file="res://assets/right_door2.png"
+dest_files=["res://.godot/imported/right_door2.png-ee2eca89aa4cbc33c0d225b807563a59.ctex"]
 
 [params]
 

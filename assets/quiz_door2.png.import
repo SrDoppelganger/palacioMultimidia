@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmr7y42kp2320"
-path="res://.godot/imported/PALCIO-PALCIO-Multimdia.png-d3245b295271728591a53521bdc997c2.ctex"
+uid="uid://c73fhcruac0hw"
+path="res://.godot/imported/quiz_door2.png-8829c6dcf2b04865af3ea07c065c71ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PALCIO-PALCIO-Multimdia.png"
-dest_files=["res://.godot/imported/PALCIO-PALCIO-Multimdia.png-d3245b295271728591a53521bdc997c2.ctex"]
+source_file="res://assets/quiz_door2.png"
+dest_files=["res://.godot/imported/quiz_door2.png-8829c6dcf2b04865af3ea07c065c71ba.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://or7odaykvyrk"
-path="res://.godot/imported/sala1.png-49f0a2016dc7f77be39275cd20f9405e.ctex"
+uid="uid://04g5vjyrf16m"
+path="res://.godot/imported/PALCIO-PALCIO-Multimdia.png-d3245b295271728591a53521bdc997c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sala1.png"
-dest_files=["res://.godot/imported/sala1.png-49f0a2016dc7f77be39275cd20f9405e.ctex"]
+source_file="res://assets/PALCIO-PALCIO-Multimdia.png"
+dest_files=["res://.godot/imported/PALCIO-PALCIO-Multimdia.png-d3245b295271728591a53521bdc997c2.ctex"]
 
 [params]
 

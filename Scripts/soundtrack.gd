@@ -14,3 +14,6 @@ func playMusic(track):
 #muta todas as musicas
 func muteMusic():
 	bgm.playing = false;
+
+func pauseMusic():
+	bgm.stream_paused

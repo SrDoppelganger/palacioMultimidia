@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://c073e02so22mb"]
+[gd_scene load_steps=9 format=3 uid="uid://c073e02so22mb"]
 
 [ext_resource type="Script" uid="uid://dy1pcykpuun32" path="res://Scripts/sala_principal.gd" id="1_4mn28"]
-[ext_resource type="Texture2D" uid="uid://or7odaykvyrk" path="res://assets/sala1.png" id="1_l5g01"]
-[ext_resource type="Texture2D" uid="uid://psxcpn733aj6" path="res://icon.svg" id="2_bd1t1"]
+[ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_jauba"]
+[ext_resource type="Texture2D" uid="uid://dbvjwx3kikjre" path="res://assets/left_door1.png" id="3_1ngob"]
+[ext_resource type="Texture2D" uid="uid://dahj8e8405x5n" path="res://assets/quiz_door1.png" id="4_1ngob"]
+[ext_resource type="Texture2D" uid="uid://bx8nnfl7frjdj" path="res://assets/left_door2.png" id="4_3urle"]
+[ext_resource type="Texture2D" uid="uid://c73fhcruac0hw" path="res://assets/quiz_door2.png" id="5_3urle"]
+[ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="5_8edo5"]
+[ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="6_x2gtq"]
 
 [node name="salaPrincipal" type="Node2D"]
 script = ExtResource("1_4mn28")
@@ -15,17 +20,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_l5g01")
+texture = ExtResource("2_jauba")
 
 [node name="porta_esq" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_top = 0.611
 anchor_bottom = 0.611
-offset_left = 51.0
-offset_top = -63.928
-offset_right = 179.0
-offset_bottom = 64.072
-texture_normal = ExtResource("2_bd1t1")
+offset_left = 7.0
+offset_top = -120.928
+offset_right = 199.0
+offset_bottom = 221.072
+texture_normal = ExtResource("3_1ngob")
+texture_hover = ExtResource("4_3urle")
 
 [node name="porta_dir" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
@@ -33,22 +39,24 @@ anchor_left = 1.0
 anchor_top = 0.634
 anchor_right = 1.0
 anchor_bottom = 0.634
-offset_left = -158.0
-offset_top = -71.832
-offset_right = -30.0
-offset_bottom = 56.168
+offset_left = -204.0
+offset_top = -118.832
+offset_right = -12.0
+offset_bottom = 223.168
 grow_horizontal = 0
-texture_normal = ExtResource("2_bd1t1")
+texture_normal = ExtResource("5_8edo5")
+texture_hover = ExtResource("6_x2gtq")
 
 [node name="porta_quiz" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_left = 0.502
 anchor_right = 0.502
-offset_left = -64.304
-offset_top = 92.0
-offset_right = 63.696
-offset_bottom = 220.0
-texture_normal = ExtResource("2_bd1t1")
+offset_left = -258.304
+offset_top = 46.0
+offset_right = 286.696
+offset_bottom = 503.0
+texture_normal = ExtResource("4_1ngob")
+texture_hover = ExtResource("5_3urle")
 
 [connection signal="pressed" from="CanvasLayer/porta_esq" to="." method="_on_porta_esq_pressed"]
 [connection signal="pressed" from="CanvasLayer/porta_dir" to="." method="_on_porta_dir_pressed"]

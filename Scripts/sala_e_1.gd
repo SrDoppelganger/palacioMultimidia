@@ -28,4 +28,4 @@ func _on_button_toggled(toggled_on: bool) -> void:
 		video.paused = false;
 	else:
 		video.paused = true;
-		Soundtrack.playMusic("placeholder")
+		Soundtrack.playMusic("placeholder");
