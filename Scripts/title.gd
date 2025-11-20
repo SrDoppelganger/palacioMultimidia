@@ -4,6 +4,5 @@ extends Node2D
 func _ready() -> void:
 	pass # Replace with function body.
 	
-
 func _on_jogar_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/sala_principal.tscn");

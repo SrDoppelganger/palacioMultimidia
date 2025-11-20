@@ -14,3 +14,7 @@ config/name="palacio_multimidia"
 run/main_scene="uid://bjj57h8qwdl30"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
