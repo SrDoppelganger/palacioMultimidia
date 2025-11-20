@@ -1,8 +1,82 @@
-[gd_scene load_steps=4 format=3 uid="uid://ct7kjnypgd42h"]
+[gd_scene load_steps=16 format=3 uid="uid://ct7kjnypgd42h"]
 
-[ext_resource type="Texture2D" uid="uid://db53yieiodjbm" path="res://assets/sala_quiz_1.png" id="1_8naxv"]
 [ext_resource type="Script" uid="uid://d2gak36byqqkt" path="res://Scripts/sala_quiz.gd" id="1_i4d8p"]
-[ext_resource type="Texture2D" uid="uid://psxcpn733aj6" path="res://icon.svg" id="2_07rrj"]
+[ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_1xcge"]
+[ext_resource type="Texture2D" uid="uid://cgkqayev3aop1" path="res://assets/NPCs/king_active.png" id="3_wuahj"]
+[ext_resource type="Texture2D" uid="uid://denhr8frqw10n" path="res://assets/NPCs/king_idle.png" id="4_gqov5"]
+[ext_resource type="Texture2D" uid="uid://c8m6jrx8d5m4w" path="res://assets/Lucid V1.2/SVG/Shadow/Down-Arrow.svg" id="5_1xcge"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaby1"]
+atlas = ExtResource("3_wuahj")
+region = Rect2(0, 0, 397, 418)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6drv0"]
+atlas = ExtResource("3_wuahj")
+region = Rect2(397, 0, 397, 418)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhj6q"]
+atlas = ExtResource("3_wuahj")
+region = Rect2(794, 0, 397, 418)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wsm5"]
+atlas = ExtResource("3_wuahj")
+region = Rect2(1191, 0, 397, 418)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxu4c"]
+atlas = ExtResource("4_gqov5")
+region = Rect2(0, 0, 397, 418)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jfxs"]
+atlas = ExtResource("4_gqov5")
+region = Rect2(397, 0, 397, 418)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rme6j"]
+atlas = ExtResource("4_gqov5")
+region = Rect2(794, 0, 397, 418)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lji5"]
+atlas = ExtResource("4_gqov5")
+region = Rect2(1191, 0, 397, 418)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f85lx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaby1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6drv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhj6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wsm5")
+}],
+"loop": true,
+"name": &"active",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxu4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jfxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rme6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lji5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xcge"]
+size = Vector2(356, 418)
 
 [node name="salaQuiz" type="Node2D"]
 script = ExtResource("1_i4d8p")
@@ -15,18 +89,35 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_8naxv")
+texture = ExtResource("2_1xcge")
+
+[node name="king" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(575, 334)
+sprite_frames = SubResource("SpriteFrames_f85lx")
+autoplay = "default"
+frame_progress = 0.169134
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/king"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/king/Area2D"]
+position = Vector2(-2, 1)
+shape = SubResource("RectangleShape2D_1xcge")
 
 [node name="voltar" type="TextureButton" parent="CanvasLayer"]
-anchors_preset = -1
+anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -151.0
-offset_top = -147.0
+offset_left = -112.0
+offset_top = -150.0
 offset_right = -23.0
-offset_bottom = -19.0
-texture_normal = ExtResource("2_07rrj")
+offset_bottom = -22.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("5_1xcge")
+stretch_mode = 0
 
+[connection signal="mouse_entered" from="CanvasLayer/king/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/king/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
