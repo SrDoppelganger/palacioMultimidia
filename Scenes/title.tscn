@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjj57h8qwdl30"]
+
+[ext_resource type="Texture2D" uid="uid://crm2nvflcdnjd" path="res://assets/title_bg.jpg" id="1_w31pl"]
+[ext_resource type="Texture2D" uid="uid://04g5vjyrf16m" path="res://assets/PALCIO-PALCIO-Multimdia.png" id="2_ekrfg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w31pl")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 287.0
+offset_right = -293.0
+offset_bottom = 331.0
+grow_horizontal = 2
+texture = ExtResource("2_ekrfg")
+expand_mode = 1
