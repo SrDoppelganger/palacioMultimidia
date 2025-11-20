@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://be7vktmc8aa06"]
+
+[ext_resource type="Script" uid="uid://bdtn4cddc0lig" path="res://Scripts/sala_d_2.gd" id="1_p3tsa"]
+[ext_resource type="Texture2D" uid="uid://cg7npbbct6ijh" path="res://assets/sala_dir_1.png" id="1_un0lq"]
+[ext_resource type="Texture2D" uid="uid://psxcpn733aj6" path="res://icon.svg" id="2_2yno5"]
+
+[node name="salaD2" type="Node2D"]
+script = ExtResource("1_p3tsa")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_un0lq")
+
+[node name="continuar" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.823
+anchor_right = 1.0
+anchor_bottom = 0.823
+offset_left = -138.0
+offset_top = -101.304
+offset_right = -10.0
+offset_bottom = 26.696
+grow_horizontal = 0
+texture_normal = ExtResource("2_2yno5")
+
+[node name="voltar" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.785
+anchor_bottom = 0.785
+offset_left = 40.0
+offset_top = -63.68
+offset_right = 168.0
+offset_bottom = 64.32
+texture_normal = ExtResource("2_2yno5")
+
+[connection signal="pressed" from="CanvasLayer/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]

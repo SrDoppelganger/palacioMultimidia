@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ct7kjnypgd42h"]
+[gd_scene load_steps=4 format=3 uid="uid://ct7kjnypgd42h"]
 
 [ext_resource type="Texture2D" uid="uid://db53yieiodjbm" path="res://assets/sala_quiz_1.png" id="1_8naxv"]
+[ext_resource type="Script" uid="uid://d2gak36byqqkt" path="res://Scripts/sala_quiz.gd" id="1_i4d8p"]
+[ext_resource type="Texture2D" uid="uid://psxcpn733aj6" path="res://icon.svg" id="2_07rrj"]
 
 [node name="salaQuiz" type="Node2D"]
+script = ExtResource("1_i4d8p")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -13,3 +16,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_8naxv")
+
+[node name="voltar" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -151.0
+offset_top = -147.0
+offset_right = -23.0
+offset_bottom = -19.0
+texture_normal = ExtResource("2_07rrj")
+
+[connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
