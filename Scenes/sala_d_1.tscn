@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds7jmsqe1g8nc"]
+[gd_scene load_steps=9 format=3 uid="uid://ds7jmsqe1g8nc"]
 
-[ext_resource type="Texture2D" uid="uid://b3uvhgsdo4jw0" path="res://assets/sala_dir_2.png" id="1_et0ww"]
 [ext_resource type="Script" uid="uid://b2prftfe5brsg" path="res://Scripts/sala_d_1.gd" id="1_p06ik"]
-[ext_resource type="Texture2D" uid="uid://psxcpn733aj6" path="res://icon.svg" id="2_qnd16"]
+[ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_yq8vs"]
+[ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="3_mfbku"]
+[ext_resource type="Texture2D" uid="uid://dbvjwx3kikjre" path="res://assets/left_door1.png" id="4_mfbku"]
+[ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="4_od6sg"]
+[ext_resource type="Texture2D" uid="uid://bx8nnfl7frjdj" path="res://assets/left_door2.png" id="5_od6sg"]
+[ext_resource type="Texture2D" uid="uid://o68sy760puwv" path="res://assets/quadro_leitura.png" id="7_ivrye"]
+[ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_idmcg"]
 
 [node name="salaD1" type="Node2D"]
 script = ExtResource("1_p06ik")
@@ -15,7 +20,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_et0ww")
+texture = ExtResource("2_yq8vs")
+
+[node name="leitura1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(488, 305)
+scale = Vector2(0.693077, 0.77518)
+texture = ExtResource("7_ivrye")
+
+[node name="leitura2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(949, 305)
+scale = Vector2(0.671539, 0.748801)
+texture = ExtResource("7_ivrye")
+
+[node name="quadro1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(727, 232)
+scale = Vector2(0.651556, 0.502589)
+texture = ExtResource("8_idmcg")
+
+[node name="quadro2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(260, 238)
+scale = Vector2(0.680059, 0.522826)
+texture = ExtResource("8_idmcg")
 
 [node name="continuar" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
@@ -23,22 +48,24 @@ anchor_left = 1.0
 anchor_top = 0.833
 anchor_right = 1.0
 anchor_bottom = 0.833
-offset_left = -157.0
-offset_top = -96.7841
-offset_right = -29.0
-offset_bottom = 31.2159
+offset_left = -204.0
+offset_top = -252.784
+offset_right = -12.0
+offset_bottom = 89.216
 grow_horizontal = 0
-texture_normal = ExtResource("2_qnd16")
+texture_normal = ExtResource("3_mfbku")
+texture_hover = ExtResource("4_od6sg")
 
 [node name="voltar" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_top = 0.808
 anchor_bottom = 0.808
-offset_left = 44.0
-offset_top = -89.584
-offset_right = 172.0
-offset_bottom = 38.416
-texture_normal = ExtResource("2_qnd16")
+offset_left = 1.0
+offset_top = -241.584
+offset_right = 193.0
+offset_bottom = 100.416
+texture_normal = ExtResource("4_mfbku")
+texture_hover = ExtResource("5_od6sg")
 
 [connection signal="pressed" from="CanvasLayer/continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
