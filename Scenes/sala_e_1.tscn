@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://wholkngbrvw6"]
+[gd_scene load_steps=6 format=3 uid="uid://wholkngbrvw6"]
 
 [ext_resource type="Texture2D" uid="uid://bf1vtmkkxbp2h" path="res://assets/sala_esq_1.png" id="1_7fj3d"]
 [ext_resource type="Script" uid="uid://dctmmyvmvyhyu" path="res://Scripts/sala_e_1.gd" id="1_ccymm"]
 [ext_resource type="Texture2D" uid="uid://psxcpn733aj6" path="res://icon.svg" id="2_wxl3r"]
+[ext_resource type="VideoStream" uid="uid://dy73ydedca57r" path="res://assets/videos/Kamen-Rider-Ryuki-Opening-Theme-Song-2002.ogv" id="4_pjg8g"]
+[ext_resource type="FontFile" uid="uid://c2eefbhm14asl" path="res://assets/fontes/pixel_operator/PixelOperator-Bold.ttf" id="5_3bj2o"]
 
 [node name="salaE1" type="Node2D"]
 script = ExtResource("1_ccymm")
@@ -40,5 +42,36 @@ offset_bottom = 23.792
 grow_horizontal = 0
 texture_normal = ExtResource("2_wxl3r")
 
+[node name="video" type="VideoStreamPlayer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.381
+anchor_right = 0.5
+anchor_bottom = 0.381
+offset_left = -361.0
+offset_top = -181.888
+offset_right = 404.0
+offset_bottom = 182.112
+stream = ExtResource("4_pjg8g")
+autoplay = true
+paused = true
+expand = true
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.539
+anchor_top = 0.659
+anchor_right = 0.539
+anchor_bottom = 0.659
+offset_left = -84.928
+offset_top = 16.968
+offset_right = 89.072
+offset_bottom = 58.968
+theme_override_fonts/font = ExtResource("5_3bj2o")
+theme_override_font_sizes/font_size = 36
+toggle_mode = true
+text = "assistir"
+
 [connection signal="pressed" from="CanvasLayer/continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="toggled" from="CanvasLayer/Button" to="." method="_on_button_toggled"]
