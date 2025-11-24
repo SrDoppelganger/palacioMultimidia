@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bur0yvh5xjc8s"]
+[gd_scene load_steps=5 format=3 uid="uid://bur0yvh5xjc8s"]
 
 [ext_resource type="Script" uid="uid://cqfpxpj3wuit" path="res://Scripts/textbox.gd" id="1_i40gg"]
 [ext_resource type="FontFile" uid="uid://bpn2unib34sxp" path="res://assets/fontes/pixel_operator/PixelOperator.ttf" id="1_psw4q"]
-[ext_resource type="Texture2D" uid="uid://cngq3okm4cpvp" path="res://assets/Lucid V1.2/SVG/Shadow/Exit.svg" id="2_yyjux"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0old7"]
 bg_color = Color(1, 1, 1, 1)
@@ -31,11 +30,6 @@ offset_bottom = 288.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-
-[node name="exit" type="TextureButton" parent="Layout"]
-layout_mode = 2
-size_flags_vertical = 0
-texture_normal = ExtResource("2_yyjux")
 
 [node name="Textbox container" type="MarginContainer" parent="Layout"]
 layout_mode = 2
@@ -69,5 +63,3 @@ theme_override_font_sizes/font_size = 24
 text = "lorem ipsum"
 autowrap_mode = 3
 clip_text = true
-
-[connection signal="pressed" from="Layout/exit" to="." method="_on_exit_pressed"]
