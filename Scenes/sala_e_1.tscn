@@ -84,6 +84,12 @@ texture_normal = ExtResource("9_42hb7")
 texture_pressed = ExtResource("10_jhlwr")
 stretch_mode = 0
 
+[connection signal="mouse_entered" from="CanvasLayer/continuar" to="." method="_on_continuar_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/continuar" to="." method="_on_continuar_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/voltar" to="." method="_on_voltar_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/voltar" to="." method="_on_voltar_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="toggled" from="CanvasLayer/Button" to="." method="_on_button_toggled"]

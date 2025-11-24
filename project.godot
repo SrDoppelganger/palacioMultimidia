@@ -18,10 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 Soundtrack="*res://Scenes/soundtrack.tscn"
+Global="*res://Scenes/global.tscn"
 
 [display]
 
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://bymi7xfii6yhp"
 
 [rendering]
 

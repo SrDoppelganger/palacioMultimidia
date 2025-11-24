@@ -95,7 +95,7 @@ texture = ExtResource("2_1xcge")
 position = Vector2(575, 334)
 sprite_frames = SubResource("SpriteFrames_f85lx")
 autoplay = "default"
-frame_progress = 0.169134
+frame_progress = 0.391842
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer/king"]
 
@@ -120,4 +120,6 @@ stretch_mode = 0
 
 [connection signal="mouse_entered" from="CanvasLayer/king/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/king/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/voltar" to="." method="_on_voltar_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/voltar" to="." method="_on_voltar_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]

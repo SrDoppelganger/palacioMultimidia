@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://bur0yvh5xjc8s"]
+
+[ext_resource type="Script" uid="uid://cqfpxpj3wuit" path="res://Scripts/textbox.gd" id="1_i40gg"]
+[ext_resource type="FontFile" uid="uid://bpn2unib34sxp" path="res://assets/fontes/pixel_operator/PixelOperator.ttf" id="1_psw4q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0old7"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.192157, 0.176471, 0.423529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i40gg"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Textbox" type="CanvasLayer"]
+script = ExtResource("1_i40gg")
+
+[node name="Textbox container" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -319.0
+offset_top = -287.5
+offset_right = 319.0
+offset_bottom = 287.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Textbox container"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0old7")
+
+[node name="MarginContainer" type="MarginContainer" parent="Textbox container"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="Textbox container/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i40gg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Textbox container/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Textbox container/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_psw4q")
+theme_override_font_sizes/font_size = 24
+text = "lorem ipsum"
+autowrap_mode = 3
+clip_text = true

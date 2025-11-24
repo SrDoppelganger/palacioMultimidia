@@ -58,6 +58,12 @@ offset_bottom = 503.0
 texture_normal = ExtResource("4_1ngob")
 texture_hover = ExtResource("5_3urle")
 
+[connection signal="mouse_entered" from="CanvasLayer/porta_esq" to="." method="_on_porta_esq_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/porta_esq" to="." method="_on_porta_esq_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/porta_esq" to="." method="_on_porta_esq_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/porta_dir" to="." method="_on_porta_dir_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/porta_dir" to="." method="_on_porta_dir_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/porta_dir" to="." method="_on_porta_dir_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/porta_quiz" to="." method="_on_porta_quiz_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/porta_quiz" to="." method="_on_porta_quiz_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/porta_quiz" to="." method="_on_porta_quiz_pressed"]
