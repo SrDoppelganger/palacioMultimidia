@@ -1,0 +1,229 @@
+[gd_scene load_steps=28 format=3 uid="uid://bjje7c0h8tbq7"]
+
+[ext_resource type="Script" uid="uid://bvwmn3obju3kr" path="res://Scripts/quiz.gd" id="1_bu0r6"]
+[ext_resource type="Shader" uid="uid://dusvyrl0r2h53" path="res://Scenes/quiz.gdshader" id="1_fdxuh"]
+[ext_resource type="Texture2D" uid="uid://cgkqayev3aop1" path="res://assets/NPCs/king_active.png" id="1_i183w"]
+[ext_resource type="Texture2D" uid="uid://dsc44csnt3xex" path="res://assets/BG/quiz_bg3.png" id="2_fdxuh"]
+[ext_resource type="FontFile" uid="uid://bpn2unib34sxp" path="res://assets/fontes/pixel_operator/PixelOperator.ttf" id="5_pkwmv"]
+[ext_resource type="Texture2D" uid="uid://cqyvmckj0okc8" path="res://assets/choice-button-neutral.png" id="6_schtj"]
+[ext_resource type="Texture2D" uid="uid://blpwqbnsglgcy" path="res://assets/choice-button-act.png" id="7_84grc"]
+[ext_resource type="FontFile" uid="uid://bhdjb8m4y2n63" path="res://assets/fontes/pixel_operator/PixelOperatorHB.ttf" id="8_5od8v"]
+[ext_resource type="Texture2D" uid="uid://cngq3okm4cpvp" path="res://assets/Lucid V1.2/SVG/Shadow/Exit.svg" id="9_jmbid"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pkwmv"]
+shader = ExtResource("1_fdxuh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i183w"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 0.694118, 0.305882, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jmbid"]
+texture = ExtResource("6_schtj")
+region_rect = Rect2(0, 0, 300, 70)
+modulate_color = Color(0.827451, 0.827451, 0.827451, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84grc"]
+texture = ExtResource("6_schtj")
+region_rect = Rect2(0, 0, 300, 70)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5od8v"]
+texture = ExtResource("7_84grc")
+region_rect = Rect2(0, 0, 300, 70)
+
+[sub_resource type="Theme" id="Theme_5od8v"]
+default_font = ExtResource("8_5od8v")
+default_font_size = 32
+Button/styles/hover = SubResource("StyleBoxTexture_jmbid")
+Button/styles/normal = SubResource("StyleBoxTexture_84grc")
+Button/styles/pressed = SubResource("StyleBoxTexture_5od8v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbquq"]
+texture = ExtResource("7_84grc")
+region_rect = Rect2(300, 0, 300, 70)
+modulate_color = Color(0.82891, 0.82891, 0.82891, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e6bo8"]
+texture = ExtResource("6_schtj")
+region_rect = Rect2(300, 0, 300, 70)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gpq0x"]
+texture = ExtResource("7_84grc")
+region_rect = Rect2(300, 0, 300, 70)
+
+[sub_resource type="Theme" id="Theme_tfh67"]
+default_font = ExtResource("8_5od8v")
+default_font_size = 32
+Button/styles/hover = SubResource("StyleBoxTexture_qbquq")
+Button/styles/normal = SubResource("StyleBoxTexture_e6bo8")
+Button/styles/pressed = SubResource("StyleBoxTexture_gpq0x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwe6j"]
+texture = ExtResource("6_schtj")
+region_rect = Rect2(600, 0, 300, 70)
+modulate_color = Color(0.827451, 0.827451, 0.827451, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tfh67"]
+texture = ExtResource("6_schtj")
+region_rect = Rect2(600, 0, 300, 70)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e7trm"]
+texture = ExtResource("7_84grc")
+region_rect = Rect2(600, 0, 300, 70)
+
+[sub_resource type="Theme" id="Theme_qbquq"]
+default_font = ExtResource("8_5od8v")
+default_font_size = 32
+Button/styles/hover = SubResource("StyleBoxTexture_hwe6j")
+Button/styles/normal = SubResource("StyleBoxTexture_tfh67")
+Button/styles/pressed = SubResource("StyleBoxTexture_e7trm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28c1y"]
+texture = ExtResource("6_schtj")
+region_rect = Rect2(900, 0, 300, 70)
+modulate_color = Color(0.827451, 0.827451, 0.827451, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0iro7"]
+texture = ExtResource("6_schtj")
+region_rect = Rect2(900, 0, 300, 70)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_esplf"]
+texture = ExtResource("7_84grc")
+region_rect = Rect2(900, 0, 300, 70)
+
+[sub_resource type="Theme" id="Theme_gpq0x"]
+default_font = ExtResource("8_5od8v")
+default_font_size = 32
+Button/styles/hover = SubResource("StyleBoxTexture_28c1y")
+Button/styles/normal = SubResource("StyleBoxTexture_0iro7")
+Button/styles/pressed = SubResource("StyleBoxTexture_esplf")
+
+[node name="Quiz" type="Node2D"]
+script = ExtResource("1_bu0r6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_pkwmv")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fdxuh")
+
+[node name="king" type="Sprite2D" parent="CanvasLayer/Background"]
+position = Vector2(184, 630)
+scale = Vector2(2, 2)
+texture = ExtResource("1_i183w")
+region_enabled = true
+region_rect = Rect2(0, 0, 397, 418)
+
+[node name="question" type="Panel" parent="CanvasLayer/Background"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -879.0
+offset_top = -299.0
+offset_right = -92.0
+offset_bottom = 142.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i183w")
+
+[node name="text" type="Label" parent="CanvasLayer/Background/question"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = -17.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_pkwmv")
+theme_override_font_sizes/font_size = 32
+text = "LOREM IPSUM"
+
+[node name="resp1" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -236.0
+offset_top = -224.0
+offset_right = 112.0
+offset_bottom = -154.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_5od8v")
+text = "A"
+
+[node name="resp2" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 199.0
+offset_top = -225.0
+offset_right = 547.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_tfh67")
+text = "B"
+
+[node name="resp3" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -237.0
+offset_top = -148.0
+offset_right = 111.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_qbquq")
+text = "C"
+
+[node name="resp4" type="Button" parent="CanvasLayer/Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 202.0
+offset_top = -147.0
+offset_right = 550.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_gpq0x")
+text = "D"
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 23.0
+offset_top = 30.0
+offset_right = 71.0
+offset_bottom = 86.0
+texture_normal = ExtResource("9_jmbid")
+texture_pressed = ExtResource("9_jmbid")
+
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]

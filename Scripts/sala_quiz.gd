@@ -16,8 +16,6 @@ func _on_voltar_mouse_entered() -> void:
 func _on_voltar_mouse_exited() -> void:
 	Global.change_to_arrow();
 
-
-
 func _on_area_2d_mouse_entered() -> void:
 	king.play("active");
 	Global.change_to_hand();
@@ -25,3 +23,8 @@ func _on_area_2d_mouse_entered() -> void:
 func _on_area_2d_mouse_exited() -> void:
 	king.play("default");
 	Global.change_to_arrow();
+
+func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.pressed:
+			get_tree().change_scene_to_file("res://Scenes/quiz.tscn");

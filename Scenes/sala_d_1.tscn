@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ds7jmsqe1g8nc"]
+[gd_scene load_steps=13 format=3 uid="uid://ds7jmsqe1g8nc"]
 
 [ext_resource type="Script" uid="uid://b2prftfe5brsg" path="res://Scripts/sala_d_1.gd" id="1_p06ik"]
 [ext_resource type="PackedScene" uid="uid://bur0yvh5xjc8s" path="res://Scenes/textbox.tscn" id="2_idmcg"]
@@ -13,6 +13,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivrye"]
 size = Vector2(292.897, 374.107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3nf0"]
+size = Vector2(302.291, 383.279)
 
 [node name="salaD1" type="Node2D"]
 script = ExtResource("1_p06ik")
@@ -43,6 +46,13 @@ shape = SubResource("RectangleShape2D_ivrye")
 position = Vector2(949, 305)
 scale = Vector2(0.671539, 0.748801)
 texture = ExtResource("7_ivrye")
+
+[node name="area_leitura2" type="Area2D" parent="CanvasLayer/leitura2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/leitura2/area_leitura2"]
+position = Vector2(-9.67944, -10.016)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_p3nf0")
 
 [node name="quadro1" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(727, 232)
@@ -94,6 +104,7 @@ offset_bottom = 95.0
 texture_normal = ExtResource("4_p3nf0")
 
 [connection signal="input_event" from="CanvasLayer/leitura1/area_leitura1" to="." method="_on_area_leitura_1_input_event"]
+[connection signal="input_event" from="CanvasLayer/leitura2/area_leitura2" to="." method="_on_area_leitura_2_input_event"]
 [connection signal="pressed" from="CanvasLayer/continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="Textbox/exit" to="." method="_on_exit_pressed"]

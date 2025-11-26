@@ -1,9 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://be7vktmc8aa06"]
+[gd_scene load_steps=7 format=3 uid="uid://be7vktmc8aa06"]
 
 [ext_resource type="Script" uid="uid://bdtn4cddc0lig" path="res://Scripts/sala_d_2.gd" id="1_p3tsa"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_xrx0y"]
-[ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="3_s1j3j"]
-[ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="4_n32ta"]
 [ext_resource type="Texture2D" uid="uid://dbvjwx3kikjre" path="res://assets/left_door1.png" id="4_xhkxs"]
 [ext_resource type="Texture2D" uid="uid://bx8nnfl7frjdj" path="res://assets/left_door2.png" id="5_xhkxs"]
 [ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_xudvs"]
@@ -21,20 +19,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_xrx0y")
-
-[node name="continuar" type="TextureButton" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 1.0
-anchor_top = 0.823
-anchor_right = 1.0
-anchor_bottom = 0.823
-offset_left = -204.0
-offset_top = -243.304
-offset_right = -12.0
-offset_bottom = 98.696
-grow_horizontal = 0
-texture_normal = ExtResource("3_s1j3j")
-texture_hover = ExtResource("4_n32ta")
 
 [node name="voltar" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
@@ -59,5 +43,4 @@ texture = ExtResource("8_1wyls")
 position = Vector2(850, 215)
 texture = ExtResource("8_1wyls")
 
-[connection signal="pressed" from="CanvasLayer/continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
