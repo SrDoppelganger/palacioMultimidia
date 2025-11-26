@@ -11,11 +11,15 @@ var numQuestoes = 2;
 #armazena index das perguntas já utilizadas
 var perguntas_utilizadas = [];
 
+#num de respostas certas
+var acerto = 0;
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.change_to_arrow();
 	changeQuestion();
+	acerto = 0;
 
 func changeQuestion():
 	var index = randi_range(0,1);
@@ -51,6 +55,7 @@ func _on_a_pressed() -> void:
 	const name = "a";
 	if checkAnswer(name):
 		print("nice!");
+		acerto += 1;
 	else:
 		print("nah");
 		
@@ -61,6 +66,7 @@ func _on_b_pressed() -> void:
 	const name = "b";
 	if checkAnswer(name):
 		print("nice!");
+		acerto += 1;
 	else:
 		print("nah");
 	
@@ -71,6 +77,7 @@ func _on_c_pressed() -> void:
 	const name = "c";
 	if checkAnswer(name):
 		print("nice!");
+		acerto += 1;
 	else:
 		print("nah");
 	
@@ -81,7 +88,30 @@ func _on_d_pressed() -> void:
 	const name = "d";
 	if checkAnswer(name):
 		print("nice!");
+		acerto += 1;
 	else:
 		print("nah");
-	
 	changeQuestion();
+
+
+# Coisas de cursores
+func _on_a_mouse_entered() -> void:
+	Global.change_to_hand();
+func _on_a_mouse_exited() -> void:
+	Global.change_to_arrow();
+	
+func _on_b_mouse_entered() -> void:
+	Global.change_to_hand();
+func _on_b_mouse_exited() -> void:
+	Global.change_to_arrow();
+
+
+func _on_c_mouse_entered() -> void:
+	Global.change_to_hand();
+func _on_c_mouse_exited() -> void:
+	Global.change_to_arrow();
+
+func _on_d_mouse_entered() -> void:
+	Global.change_to_hand();
+func _on_d_mouse_exited() -> void:
+	Global.change_to_arrow();

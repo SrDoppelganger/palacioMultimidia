@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3nj6aoahyccb"]
+
+[ext_resource type="Texture2D" uid="uid://cpvpdtlbe5ahk" path="res://assets/BG/victoryBG.png" id="1_5nawm"]
+[ext_resource type="Shader" uid="uid://c6o07kcwn8o7b" path="res://Scenes/quiz_end.gdshader" id="1_sthd7"]
+[ext_resource type="FontFile" uid="uid://7unj3e3o3sgm" path="res://assets/fontes/pixel_operator/PixelOperator8-Bold.ttf" id="3_jfujm"]
+[ext_resource type="Texture2D" uid="uid://di0athyrg3j2v" path="res://assets/NPCs/KING-WIN.png" id="4_nukf3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jfujm"]
+shader = ExtResource("1_sthd7")
+
+[node name="quiz_end" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="background" type="TextureRect" parent="CanvasLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_jfujm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5nawm")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -169.0
+offset_right = 560.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_jfujm")
+theme_override_font_sizes/font_size = 64
+text = "OBRIGADO POR JOGAR!"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(589, 446)
+texture = ExtResource("4_nukf3")
