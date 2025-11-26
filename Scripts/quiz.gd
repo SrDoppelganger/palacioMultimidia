@@ -7,6 +7,11 @@ extends Node2D
 
 #armazena a resposta certa da pergunta
 var alt_correta;
+var numQuestoes = 2;
+#armazena index das perguntas já utilizadas
+var perguntas_utilizadas = [];
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.change_to_arrow();
@@ -14,6 +19,13 @@ func _ready() -> void:
 
 func changeQuestion():
 	var index = randi_range(0,1);
+	if perguntas_utilizadas.size() == numQuestoes:
+		#tira o jogador da cena caso todas as perguntas tenham sido resolvidas
+		get_tree().change_scene_to_file("res://Scenes/sala_quiz.tscn");
+	if perguntas_utilizadas.has(index) == true:
+		index = randi_range(index,numQuestoes - 1); 
+	else:
+		perguntas_utilizadas.append(index);
 	var question_text = bd.getQuestion(index)
 	
 	#0-enunciado 1-alternativas 2-resp. certa
@@ -41,6 +53,8 @@ func _on_a_pressed() -> void:
 		print("nice!");
 	else:
 		print("nah");
+		
+	changeQuestion();
 
 #BOTÃO B
 func _on_b_pressed() -> void:
@@ -49,6 +63,8 @@ func _on_b_pressed() -> void:
 		print("nice!");
 	else:
 		print("nah");
+	
+	changeQuestion();
 
 #BOTÃO C
 func _on_c_pressed() -> void:
@@ -57,6 +73,8 @@ func _on_c_pressed() -> void:
 		print("nice!");
 	else:
 		print("nah");
+	
+	changeQuestion();
 
 #BOTÃO D
 func _on_d_pressed() -> void:
@@ -65,3 +83,5 @@ func _on_d_pressed() -> void:
 		print("nice!");
 	else:
 		print("nah");
+	
+	changeQuestion();
