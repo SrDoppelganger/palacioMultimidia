@@ -1,7 +1,7 @@
 extends Node
 
 @onready var bgm = %bgm
-
+var music_bus = AudioServer.get_bus_index("Music")
 
 func playMusic(track):
 	match track:
@@ -14,7 +14,7 @@ func playMusic(track):
 
 #muta todas as musicas
 func muteMusic():
-	bgm.playing = false;
+	AudioServer.set_bus_mute(music_bus, not AudioServer.is_bus_mute(music_bus));
 
 func pauseMusic():
-	bgm.stream_paused
+	bgm.playing = false;

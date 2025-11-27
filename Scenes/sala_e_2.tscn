@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://xtlj7osanapq"]
+[gd_scene load_steps=8 format=3 uid="uid://xtlj7osanapq"]
 
 [ext_resource type="Script" uid="uid://dpf2f5j24hucu" path="res://Scripts/sala_e_2.gd" id="1_8iquw"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_sjp7c"]
 [ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="5_sjp7c"]
 [ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="6_xmbx1"]
+[ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="7_hlinm"]
 [ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_jgq17"]
 [ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_6oh3s"]
 
@@ -53,5 +54,11 @@ texture = ExtResource("8_6oh3s")
 position = Vector2(697.938, 217.062)
 scale = Vector2(0.698209, 0.710882)
 texture = ExtResource("8_6oh3s")
+
+[node name="Mute_Button" parent="CanvasLayer" instance=ExtResource("7_hlinm")]
+offset_left = 1074.0
+offset_top = 20.0
+offset_right = 1130.0
+offset_bottom = 76.0
 
 [connection signal="pressed" from="CanvasLayer/salaE1" to="." method="_on_sala_e_1_pressed"]

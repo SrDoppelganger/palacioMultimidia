@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ds7jmsqe1g8nc"]
+[gd_scene load_steps=14 format=3 uid="uid://ds7jmsqe1g8nc"]
 
 [ext_resource type="Script" uid="uid://b2prftfe5brsg" path="res://Scripts/sala_d_1.gd" id="1_p06ik"]
 [ext_resource type="PackedScene" uid="uid://bur0yvh5xjc8s" path="res://Scenes/textbox.tscn" id="2_idmcg"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bx8nnfl7frjdj" path="res://assets/left_door2.png" id="5_od6sg"]
 [ext_resource type="Texture2D" uid="uid://o68sy760puwv" path="res://assets/quadro_leitura.png" id="7_ivrye"]
 [ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_idmcg"]
+[ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="9_gluyj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivrye"]
 size = Vector2(292.897, 374.107)
@@ -88,6 +89,16 @@ offset_right = 193.0
 offset_bottom = 100.416
 texture_normal = ExtResource("4_mfbku")
 texture_hover = ExtResource("5_od6sg")
+
+[node name="Mute_Button" parent="CanvasLayer" instance=ExtResource("9_gluyj")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -78.0
+offset_top = 20.0
+offset_right = -22.0
+offset_bottom = 76.0
+grow_horizontal = 0
 
 [node name="Textbox" parent="." instance=ExtResource("2_idmcg")]
 visible = false

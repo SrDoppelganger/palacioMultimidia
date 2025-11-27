@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://8jbnfhtvk2w5"]
+
+[ext_resource type="Texture2D" uid="uid://bknns0nvoiv6n" path="res://assets/BG/bg.jpeg" id="1_0p54k"]
+[ext_resource type="Script" uid="uid://eydwhvxqrvi3" path="res://Scripts/about.gd" id="1_m6yjq"]
+[ext_resource type="FontFile" uid="uid://c2eefbhm14asl" path="res://assets/fontes/pixel_operator/PixelOperator-Bold.ttf" id="2_t286r"]
+[ext_resource type="Texture2D" uid="uid://cngq3okm4cpvp" path="res://assets/Lucid V1.2/SVG/Shadow/Exit.svg" id="3_t286r"]
+
+[node name="About" type="Node2D"]
+script = ExtResource("1_m6yjq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0p54k")
+
+[node name="title" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_right = 45.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_t286r")
+theme_override_font_sizes/font_size = 64
+text = "SOBRE NÓS"
+
+[node name="info" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -521.5
+offset_top = -177.5
+offset_right = 521.5
+offset_bottom = 177.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_t286r")
+theme_override_font_sizes/font_size = 32
+text = "Lucas Henrique Lins da Silva - 01613905
+Arthur Albuquerque Pereira - 01603940
+Miguel Luna Giovannetti de Arruda Amorim - 01590491
+Fábio Coutinho Aroucha 01597225
+Davi Fontes Barbosa - 01589639"
+
+[node name="back" type="TextureButton" parent="CanvasLayer"]
+offset_left = 41.0
+offset_top = 14.0
+offset_right = 89.0
+offset_bottom = 70.0
+texture_normal = ExtResource("3_t286r")
+texture_pressed = ExtResource("3_t286r")
+texture_hover = ExtResource("3_t286r")
+
+[connection signal="pressed" from="CanvasLayer/back" to="." method="_on_back_pressed"]

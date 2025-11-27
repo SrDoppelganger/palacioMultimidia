@@ -30,18 +30,38 @@ texture = ExtResource("2_ekrfg")
 expand_mode = 1
 
 [node name="Jogar" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(300, 0)
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -105.0
-offset_top = -142.0
+offset_top = -237.0
 offset_right = 113.0
-offset_bottom = -67.0
+offset_bottom = -162.0
+grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_fp2oq")
 theme_override_font_sizes/font_size = 48
 text = "JOGAR"
 
+[node name="Sobre" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(300, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -105.0
+offset_top = -134.0
+offset_right = 113.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_fp2oq")
+theme_override_font_sizes/font_size = 48
+text = "SOBRE"
+
 [connection signal="pressed" from="CanvasLayer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sobre" to="." method="_on_sobre_pressed"]

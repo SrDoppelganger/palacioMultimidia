@@ -6,3 +6,7 @@ func _ready() -> void:
 	
 func _on_jogar_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/sala_principal.tscn");
+
+
+func _on_sobre_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/about.tscn");

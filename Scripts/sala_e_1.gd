@@ -27,7 +27,7 @@ func _on_voltar_mouse_exited() -> void:
 
 func _on_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
-		Soundtrack.muteMusic();
+		Soundtrack.pauseMusic();
 		video.paused = false;
 	else:
 		video.paused = true;
