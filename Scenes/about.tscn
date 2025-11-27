@@ -143,4 +143,6 @@ texture_normal = ExtResource("3_t286r")
 texture_pressed = ExtResource("3_t286r")
 texture_hover = ExtResource("3_t286r")
 
+[connection signal="mouse_entered" from="CanvasLayer/back" to="." method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/back" to="." method="_on_back_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/back" to="." method="_on_back_pressed"]

@@ -5,7 +5,7 @@ const questions = {
 	0:{
 		"enunciado":"O que é video?",
 		"alternativas":"a)alt1\nb)alt2\nc)alt3\nd)alt4",
-		"resposta":"a"
+		"resposta":"b"
 	},
 	1:{
 		"enunciado":"0 que é uma imagem?",
