@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://xtlj7osanapq"]
+[gd_scene load_steps=9 format=3 uid="uid://xtlj7osanapq"]
 
 [ext_resource type="Script" uid="uid://dpf2f5j24hucu" path="res://Scripts/sala_e_2.gd" id="1_8iquw"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_sjp7c"]
 [ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="5_sjp7c"]
+[ext_resource type="Texture2D" uid="uid://cuyq5fjukp64a" path="res://assets/NOTE.png" id="6_jgq17"]
 [ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="6_xmbx1"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="7_hlinm"]
 [ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_jgq17"]
@@ -35,23 +36,31 @@ grow_horizontal = 0
 texture_normal = ExtResource("5_sjp7c")
 texture_hover = ExtResource("6_xmbx1")
 
-[node name="pilar1" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(284, 454)
+[node name="pilar2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(581, 493)
 scale = Vector2(1.3125, 1.23828)
 texture = ExtResource("7_jgq17")
 
-[node name="pilar2" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(893, 453)
-scale = Vector2(1.3125, 1.23828)
-texture = ExtResource("7_jgq17")
+[node name="music" type="TextureButton" parent="CanvasLayer/pilar2"]
+offset_left = -39.619
+offset_top = -163.129
+offset_right = 210.381
+offset_bottom = 236.871
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("6_jgq17")
 
 [node name="quadro1" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(447, 215)
+position = Vector2(246, 268)
 scale = Vector2(0.686137, 0.682941)
 texture = ExtResource("8_6oh3s")
 
 [node name="quadro2" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(697.938, 217.062)
+position = Vector2(575, 142)
+scale = Vector2(0.698209, 0.710882)
+texture = ExtResource("8_6oh3s")
+
+[node name="quadro3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(915, 275)
 scale = Vector2(0.698209, 0.710882)
 texture = ExtResource("8_6oh3s")
 
