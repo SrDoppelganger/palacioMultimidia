@@ -8,11 +8,13 @@ extends Node2D
 #armazena a resposta certa da pergunta
 var alt_correta;
 var numQuestoes = 10;
-#armazena index das perguntas já utilizadas
-var perguntas_utilizadas = [];
+#armazena index das perguntas disponiveis
+var perguntas_disponiveis = [0,1,2,3,4,5,6,7,8,9];
 
 #num de respostas certas
 var acerto = 0;
+#guarda index da questão atual para removê-la
+var index = 0;
 
 
 # Called when the node enters the scene tree for the first time.
@@ -26,22 +28,18 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://Scenes/quiz_end.tscn");
 
 func changeQuestion():
-	var index = randi_range(0,1);
-	if perguntas_utilizadas.size() == numQuestoes:
-		#tira o jogador da cena caso todas as perguntas tenham sido resolvidas
+	#verifica se ainda tem perguntas disponíveis
+	if perguntas_disponiveis.is_empty():
 		get_tree().change_scene_to_file("res://Scenes/sala_quiz.tscn");
-	if perguntas_utilizadas.has(index) == true:
-		index = randi_range(index,numQuestoes - 1); 
 	else:
-		perguntas_utilizadas.append(index);
-	var question_text = bd.getQuestion(index)
+		index = perguntas_disponiveis.pick_random();
+		var question_text = bd.getQuestion(index)
+		
+		#0-enunciado 1-alternativas 2-resp. certa
+		pergunta.text = question_text[0];
+		alternativas.text = question_text[1];
+		setAnswer(question_text[2]);
 	
-	#0-enunciado 1-alternativas 2-resp. certa
-	pergunta.text = question_text[0];
-	alternativas.text = question_text[1];
-	setAnswer(question_text[2]);
-	
-
 #define a resposta certa da pergunta
 func setAnswer(resp: String):
 	alt_correta = resp;
@@ -58,43 +56,34 @@ func _on_texture_button_pressed() -> void:
 func _on_a_pressed() -> void:
 	const name = "a";
 	if checkAnswer(name):
-		print("nice!");
 		acerto += 1;
-	else:
-		print("nah");
-		
+	perguntas_disponiveis.erase(index);
 	changeQuestion();
 
 #BOTÃO B
 func _on_b_pressed() -> void:
 	const name = "b";
 	if checkAnswer(name):
-		print("nice!");
 		acerto += 1;
-	else:
-		print("nah");
-	
+	perguntas_disponiveis.erase(index);
 	changeQuestion();
 
 #BOTÃO C
 func _on_c_pressed() -> void:
 	const name = "c";
 	if checkAnswer(name):
-		print("nice!");
 		acerto += 1;
-	else:
-		print("nah");
-	
+
+	perguntas_disponiveis.erase(index);
 	changeQuestion();
 
 #BOTÃO D
 func _on_d_pressed() -> void:
 	const name = "d";
 	if checkAnswer(name):
-		print("nice!");
 		acerto += 1;
-	else:
-		print("nah");
+
+	perguntas_disponiveis.erase(index);
 	changeQuestion();
 
 
