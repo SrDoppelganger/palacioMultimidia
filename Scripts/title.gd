@@ -10,3 +10,9 @@ func _on_jogar_pressed() -> void:
 
 func _on_sobre_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/about.tscn");
+
+
+func _on_mouse_entered() -> void:
+	Global.change_to_hand();
+func _on_mouse_exited() -> void:
+	Global.change_to_arrow();

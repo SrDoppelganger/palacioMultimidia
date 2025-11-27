@@ -1,13 +1,42 @@
 extends Node2D
 
+@onready var textbox: CanvasLayer = $Textbox
+@onready var exit: TextureButton = $Textbox/exit
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-
 
 func _on_continuar_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/sala_principal.tscn");
 
 func _on_voltar_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/sala_d_1.tscn");
+
+# ============================================================================================== #
+func _on_area_leitura_1_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.pressed:
+			show_info("leitura 1");
+
+func _on_area_leitura_2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.pressed:
+			show_info("leitura 2");
+
+func show_info(info:String):
+	textbox.set_text(info);
+	textbox.show();
+	textbox.show_text();
+	exit.show();
+
+func _on_exit_pressed() -> void:
+	textbox.hide_text();
+	exit.hide();
+
+# scripts de cursores
+func _on_mouse_entered() -> void:
+	Global.change_to_hand();
+
+func _on_mouse_exited() -> void:
+	Global.change_to_arrow();

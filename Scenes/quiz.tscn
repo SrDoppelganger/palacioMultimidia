@@ -268,4 +268,8 @@ offset_bottom = 168.0
 [connection signal="mouse_entered" from="CanvasLayer/Background/D" to="." method="_on_d_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Background/D" to="." method="_on_d_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Background/D" to="." method="_on_d_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/TextureButton" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/TextureButton" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/Mute_Button" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Mute_Button" to="." method="_on_mouse_exited"]

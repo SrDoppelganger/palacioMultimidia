@@ -63,5 +63,9 @@ theme_override_fonts/font = ExtResource("3_fp2oq")
 theme_override_font_sizes/font_size = 48
 text = "SOBRE"
 
+[connection signal="mouse_entered" from="CanvasLayer/Jogar" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Jogar" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/Sobre" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Sobre" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Sobre" to="." method="_on_sobre_pressed"]

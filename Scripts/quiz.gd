@@ -115,3 +115,9 @@ func _on_d_mouse_entered() -> void:
 	Global.change_to_hand();
 func _on_d_mouse_exited() -> void:
 	Global.change_to_arrow();
+
+
+func _on_mouse_entered() -> void:
+	Global.change_to_hand();
+func _on_mouse_exited() -> void:
+	Global.change_to_arrow();

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://be7vktmc8aa06"]
+[gd_scene load_steps=12 format=3 uid="uid://be7vktmc8aa06"]
 
 [ext_resource type="Script" uid="uid://bdtn4cddc0lig" path="res://Scripts/sala_d_2.gd" id="1_p3tsa"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_xrx0y"]
@@ -7,6 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="7_n32ta"]
 [ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_xudvs"]
 [ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_1wyls"]
+[ext_resource type="Texture2D" uid="uid://o68sy760puwv" path="res://assets/quadro_leitura.png" id="8_xudvs"]
+[ext_resource type="PackedScene" uid="uid://bur0yvh5xjc8s" path="res://Scenes/textbox.tscn" id="9_64euw"]
+[ext_resource type="Texture2D" uid="uid://cngq3okm4cpvp" path="res://assets/Lucid V1.2/SVG/Shadow/Exit.svg" id="10_4xy3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1wyls"]
+size = Vector2(293, 382)
 
 [node name="salaD2" type="Node2D"]
 script = ExtResource("1_p3tsa")
@@ -33,16 +39,40 @@ texture_normal = ExtResource("4_xhkxs")
 texture_hover = ExtResource("5_xhkxs")
 
 [node name="pilar" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(610, 456)
+position = Vector2(722, 493)
 texture = ExtResource("7_xudvs")
 
 [node name="quadro" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(345, 220)
+position = Vector2(268, 162)
+scale = Vector2(0.637072, 0.62)
 texture = ExtResource("8_1wyls")
 
 [node name="quadro2" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(850, 215)
+position = Vector2(717, 162)
+scale = Vector2(0.630841, 0.622941)
 texture = ExtResource("8_1wyls")
+
+[node name="leitura" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(488, 302)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_xudvs")
+
+[node name="AreaLeitura1" type="Area2D" parent="CanvasLayer/leitura"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/leitura/AreaLeitura1"]
+position = Vector2(-2.5, -5)
+shape = SubResource("RectangleShape2D_1wyls")
+
+[node name="leitura2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(953, 302)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("8_xudvs")
+
+[node name="AreaLeitura2" type="Area2D" parent="CanvasLayer/leitura2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/leitura2/AreaLeitura2"]
+position = Vector2(-2.5, -5)
+shape = SubResource("RectangleShape2D_1wyls")
 
 [node name="Mute_Button" parent="CanvasLayer" instance=ExtResource("7_n32ta")]
 anchors_preset = 1
@@ -54,4 +84,31 @@ offset_right = -22.0
 offset_bottom = 76.0
 grow_horizontal = 0
 
+[node name="Textbox" parent="." instance=ExtResource("9_64euw")]
+visible = false
+
+[node name="exit" type="TextureButton" parent="Textbox"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.098
+anchor_right = 0.14
+offset_left = 0.103996
+offset_top = 39.0
+offset_right = -0.279999
+offset_bottom = 95.0
+texture_normal = ExtResource("10_4xy3v")
+
+[connection signal="mouse_entered" from="CanvasLayer/voltar" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/voltar" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="input_event" from="CanvasLayer/leitura/AreaLeitura1" to="." method="_on_area_leitura_1_input_event"]
+[connection signal="mouse_entered" from="CanvasLayer/leitura/AreaLeitura1" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/leitura/AreaLeitura1" to="." method="_on_mouse_exited"]
+[connection signal="input_event" from="CanvasLayer/leitura2/AreaLeitura2" to="." method="_on_area_leitura_2_input_event"]
+[connection signal="mouse_entered" from="CanvasLayer/leitura2/AreaLeitura2" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/leitura2/AreaLeitura2" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/Mute_Button" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Mute_Button" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Textbox/exit" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Textbox/exit" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Textbox/exit" to="." method="_on_exit_pressed"]
