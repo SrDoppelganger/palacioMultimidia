@@ -62,4 +62,5 @@ theme_override_fonts/font = ExtResource("1_psw4q")
 theme_override_font_sizes/font_size = 24
 text = "lorem ipsum"
 autowrap_mode = 3
+justification_flags = 2
 clip_text = true
