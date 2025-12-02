@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://8jbnfhtvk2w5"]
 
-[ext_resource type="Texture2D" uid="uid://bknns0nvoiv6n" path="res://assets/BG/bg.jpeg" id="1_0p54k"]
 [ext_resource type="Script" uid="uid://eydwhvxqrvi3" path="res://Scripts/about.gd" id="1_m6yjq"]
+[ext_resource type="Texture2D" uid="uid://donddwcrnholp" path="res://assets/BG/BG2.jpeg" id="2_m6yjq"]
 [ext_resource type="FontFile" uid="uid://c2eefbhm14asl" path="res://assets/fontes/pixel_operator/PixelOperator-Bold.ttf" id="2_t286r"]
 [ext_resource type="Texture2D" uid="uid://cngq3okm4cpvp" path="res://assets/Lucid V1.2/SVG/Shadow/Exit.svg" id="3_t286r"]
 
@@ -16,7 +16,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_0p54k")
+texture = ExtResource("2_m6yjq")
+expand_mode = 1
 
 [node name="title" type="Label" parent="CanvasLayer"]
 anchors_preset = 5

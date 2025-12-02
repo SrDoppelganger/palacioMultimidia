@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://xtlj7osanapq"]
+[gd_scene load_steps=10 format=3 uid="uid://xtlj7osanapq"]
 
 [ext_resource type="Script" uid="uid://dpf2f5j24hucu" path="res://Scripts/sala_e_2.gd" id="1_8iquw"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_sjp7c"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="7_hlinm"]
 [ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_jgq17"]
 [ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_6oh3s"]
+[ext_resource type="VideoStream" uid="uid://bual58t026qk2" path="res://assets/animacoes/Animação-2.ogv" id="8_6xvro"]
 
 [node name="salaE2" type="Node2D"]
 script = ExtResource("1_8iquw")
@@ -53,6 +54,16 @@ texture_normal = ExtResource("6_jgq17")
 position = Vector2(246, 268)
 scale = Vector2(0.686137, 0.682941)
 texture = ExtResource("8_6oh3s")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer/quadro1"]
+offset_left = -123.882
+offset_top = -125.926
+offset_right = 436.118
+offset_bottom = 434.074
+scale = Vector2(0.45, 0.5)
+stream = ExtResource("8_6xvro")
+autoplay = true
+loop = true
 
 [node name="quadro2" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(575, 142)
