@@ -1,12 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://be7vktmc8aa06"]
+[gd_scene load_steps=14 format=3 uid="uid://be7vktmc8aa06"]
 
 [ext_resource type="Script" uid="uid://bdtn4cddc0lig" path="res://Scripts/sala_d_2.gd" id="1_p3tsa"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_xrx0y"]
 [ext_resource type="Texture2D" uid="uid://dbvjwx3kikjre" path="res://assets/left_door1.png" id="4_xhkxs"]
 [ext_resource type="Texture2D" uid="uid://bx8nnfl7frjdj" path="res://assets/left_door2.png" id="5_xhkxs"]
+[ext_resource type="Texture2D" uid="uid://ddx2gi8jwawvp" path="res://assets/anim_trad_placeholder.png" id="7_4xy3v"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="7_n32ta"]
 [ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_xudvs"]
 [ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_1wyls"]
+[ext_resource type="Texture2D" uid="uid://cx244nbi7a6e6" path="res://assets/cgi_ref_placeholder.jpg" id="8_53lhh"]
 [ext_resource type="Texture2D" uid="uid://o68sy760puwv" path="res://assets/quadro_leitura.png" id="8_xudvs"]
 [ext_resource type="PackedScene" uid="uid://bur0yvh5xjc8s" path="res://Scenes/textbox.tscn" id="9_64euw"]
 [ext_resource type="Texture2D" uid="uid://cngq3okm4cpvp" path="res://assets/Lucid V1.2/SVG/Shadow/Exit.svg" id="10_4xy3v"]
@@ -47,10 +49,20 @@ position = Vector2(268, 162)
 scale = Vector2(0.637072, 0.62)
 texture = ExtResource("8_1wyls")
 
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/quadro"]
+position = Vector2(2.35452, 10.4838)
+scale = Vector2(0.326293, 0.282674)
+texture = ExtResource("7_4xy3v")
+
 [node name="quadro2" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(717, 162)
 scale = Vector2(0.630841, 0.622941)
 texture = ExtResource("8_1wyls")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/quadro2"]
+position = Vector2(2.01855, 10.9879)
+scale = Vector2(0.442407, 0.363548)
+texture = ExtResource("8_53lhh")
 
 [node name="leitura" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(488, 302)
