@@ -1,6 +1,8 @@
 extends Node
 
 @onready var bgm = %bgm
+@onready var accept: AudioStreamPlayer = $accept
+@onready var denied: AudioStreamPlayer = $denied
 
 
 var music_bus = AudioServer.get_bus_index("Music")
@@ -20,3 +22,9 @@ func muteMusic():
 
 func pauseMusic():
 	bgm.playing = false;
+	
+func playAccept():
+	accept.play();
+	
+func playDenied():
+	denied.play();

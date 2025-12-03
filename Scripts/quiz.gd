@@ -57,6 +57,9 @@ func _on_a_pressed() -> void:
 	const name = "a";
 	if checkAnswer(name):
 		acerto += 1;
+		Soundtrack.playAccept();
+	else:
+		Soundtrack.playDenied();
 	perguntas_disponiveis.erase(index);
 	changeQuestion();
 
@@ -65,6 +68,9 @@ func _on_b_pressed() -> void:
 	const name = "b";
 	if checkAnswer(name):
 		acerto += 1;
+		Soundtrack.playAccept();
+	else:
+		Soundtrack.playDenied();
 	perguntas_disponiveis.erase(index);
 	changeQuestion();
 
@@ -73,7 +79,9 @@ func _on_c_pressed() -> void:
 	const name = "c";
 	if checkAnswer(name):
 		acerto += 1;
-
+		Soundtrack.playAccept();
+	else:
+		Soundtrack.playDenied();
 	perguntas_disponiveis.erase(index);
 	changeQuestion();
 
@@ -82,7 +90,9 @@ func _on_d_pressed() -> void:
 	const name = "d";
 	if checkAnswer(name):
 		acerto += 1;
-
+		Soundtrack.playAccept();
+	else:
+		Soundtrack.playDenied();
 	perguntas_disponiveis.erase(index);
 	changeQuestion();
 

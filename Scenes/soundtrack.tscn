@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvusva6yf6fe0"]
+[gd_scene load_steps=5 format=3 uid="uid://dvusva6yf6fe0"]
 
 [ext_resource type="Script" uid="uid://c7361qhfp0rsk" path="res://Scripts/soundtrack.gd" id="1_v18me"]
 [ext_resource type="AudioStream" uid="uid://1y0pmc32rahl" path="res://assets/audios/Museu.ogg" id="2_ahp3e"]
+[ext_resource type="AudioStream" uid="uid://c05cs483hq1uh" path="res://assets/audios/accept.mp3" id="3_34duy"]
+[ext_resource type="AudioStream" uid="uid://xm6btb157jmr" path="res://assets/audios/denied.mp3" id="4_og2am"]
 
 [node name="Soundtrack" type="Node"]
 script = ExtResource("1_v18me")
@@ -12,3 +14,9 @@ stream = ExtResource("2_ahp3e")
 volume_db = -10.0
 bus = &"Music"
 parameters/looping = true
+
+[node name="accept" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_34duy")
+
+[node name="denied" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_og2am")
