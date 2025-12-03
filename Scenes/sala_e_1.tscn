@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_4x8vr"]
 [ext_resource type="Texture2D" uid="uid://dbvjwx3kikjre" path="res://assets/left_door1.png" id="3_bsevs"]
 [ext_resource type="Texture2D" uid="uid://bx8nnfl7frjdj" path="res://assets/left_door2.png" id="4_bsevs"]
-[ext_resource type="VideoStream" uid="uid://dy73ydedca57r" path="res://assets/videos/Kamen-Rider-Ryuki-Opening-Theme-Song-2002.ogv" id="4_pjg8g"]
 [ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="5_bsevs"]
 [ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="6_w6rf5"]
+[ext_resource type="VideoStream" uid="uid://cy558205ug446" path="res://assets/videos/VID-20251203-WA0036 (1).ogv" id="8_jhlwr"]
 [ext_resource type="Texture2D" uid="uid://b07p3w1wkvxyh" path="res://assets/Lucid V1.2/SVG/Shadow/Play.svg" id="9_42hb7"]
 [ext_resource type="Texture2D" uid="uid://pobdgcu0lq5m" path="res://assets/quadro_grande.png" id="9_jjmmt"]
 [ext_resource type="Texture2D" uid="uid://cujvlw020dc2t" path="res://assets/Lucid V1.2/SVG/Shadow/Pause.svg" id="10_jhlwr"]
@@ -64,7 +64,7 @@ offset_left = -402.0
 offset_top = -212.888
 offset_right = 445.0
 offset_bottom = 172.112
-stream = ExtResource("4_pjg8g")
+stream = ExtResource("8_jhlwr")
 volume_db = -10.0
 autoplay = true
 paused = true
