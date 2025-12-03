@@ -43,18 +43,38 @@ const questions = {
 		"resposta":"d"
 	},
 	8:{
-		"enunciado":"0 que é uma imagem?",
-		"alternativas":"a)alt1\nb)alt2\nc)alt3\nd)alt4",
+		"enunciado":"0 que caracteriza uma animação 3D?",
+		"alternativas":"a)É um estilo de animação feita com modelos,profundidade e luz \nb)É um estilo de animação somente baseada em vetores\nc)É um estilo de animação que utiliza fotos de atores reais numa determinada frequencia de quadros por segundo\nd)É um estilo de animação que utiliza figuras reais numa sequencia de fotos",
 		"resposta":"b"
 	},
 	9:{
-		"enunciado":"0 que é uma imagem?",
-		"alternativas":"a)alt1\nb)alt2\nc)alt3\nd)alt4",
+		"enunciado":"Qual é a diferença entre animação bidimensional e animação tridimensional?",
+		"alternativas":"a)Na animação bidimensional, a elaboração das imagens requer um processamento muito intensivo, ao contrário da animação tridimensional\nb)Técnicas de animação 2D tendem a focar em manipulação de imagens enquanto animações 3D geralmente constroem 'mundos' virtuais onde os objetos podem se mover e interagir.\nc)Toda animação feita por computadores é animação 3D, enquanto animações 2D são sempre feitas no papel.\nd)Animação 2D usa de interpolação para ser feita, enquanto animações 3D usam keyframes.",
 		"resposta":"b"
 	},
 	10:{
-		"enunciado":"0 que é uma imagem?",
-		"alternativas":"a)alt1\nb)alt2\nc)alt3\nd)alt4",
+		"enunciado":"O que é Rotoscopia?",
+		"alternativas":"a)uma técnica de animação que permite criar a ilusão de movimento ao se manipular fisicamente objetos do mundo real e os fotografar frame a frame.\nb) Nome alternativo para animação tradicional\nc) Uma técnica usada para imitar animação tradicional usando softwares de computadores\nd) Técnica onde animadores fazem o traço de movimentos reais, frame a frame.",
+		"resposta":"d"
+	},
+	11:{
+		"enunciado":"O que é animação STOP MOTION?",
+		"alternativas":"a)É um tipo de animação que utiliza vetores para criar a ilusão de movimento\nb) Nome alternativo para animação tradicional\nc)É um estilo de animação que utiliza movimentos de atores reais digitalizados pelo computador\nd)É um estilo de animação que utiliza fotos de objetos reais sendo movidos um pouquinho de cada vez. Quando juntamos as fotos, o movimento aparece",
+		"resposta":"d"
+	},
+	12:{
+		"enunciado":"Quais das alternativas abaixo NÃO é uma caracteristica comum entre animação tradicional e CGI?",
+		"alternativas":"a)modelos, luz e profundidade.\nb) Taxa de quadros\nc)Cores\nd)os princípios de antecipação e  aceleração e desaceleração",
+		"resposta":"a"
+	},
+	13:{
+		"enunciado":"Quais desses formatos de arquivo são indicados para animações de longa duração com audio?",
+		"alternativas":"a).MP3\nb).WAV\nc).MP4\nd).JPEG",
+		"resposta":"c"
+	},
+	14:{
+		"enunciado":"Qual a diferença entre animação 3D e STOP MOTION?",
+		"alternativas":"a)Animação STOP MOTION só pode ser feita por computador.\nb)A animação STOP MOTION utiliza fotos de objetos reais em rápida sucessão enquanto que animação 3D utiliza modelos poligonais animados por computador\nc)A animação 3D é feita utilizando movimento de atores reais em um espaço virtual enquanto que STOP MOTION é feito utilizando desenhos 2D em rápida sucessão para criar a ilusão de movimento\nd)Animação STOP MOTION é uma técnica arcaíca de animação 3D, que não é mais utilizada no mercado.",
 		"resposta":"b"
 	},
 }

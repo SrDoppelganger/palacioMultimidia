@@ -1,6 +1,8 @@
 extends Node
 
 @onready var bgm = %bgm
+
+
 var music_bus = AudioServer.get_bus_index("Music")
 
 func playMusic(track):

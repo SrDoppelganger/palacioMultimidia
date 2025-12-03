@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3nj6aoahyccb"]
+[gd_scene load_steps=8 format=3 uid="uid://d3nj6aoahyccb"]
 
 [ext_resource type="Texture2D" uid="uid://cpvpdtlbe5ahk" path="res://assets/BG/victoryBG.png" id="1_5nawm"]
+[ext_resource type="Script" uid="uid://dn6o7sogyepr0" path="res://Scripts/quiz_end.gd" id="1_43g7a"]
 [ext_resource type="Shader" uid="uid://c6o07kcwn8o7b" path="res://Scenes/quiz_end.gdshader" id="1_sthd7"]
 [ext_resource type="FontFile" uid="uid://7unj3e3o3sgm" path="res://assets/fontes/pixel_operator/PixelOperator8-Bold.ttf" id="3_jfujm"]
 [ext_resource type="Texture2D" uid="uid://di0athyrg3j2v" path="res://assets/NPCs/KING-WIN.png" id="4_nukf3"]
+[ext_resource type="FontFile" uid="uid://d2thbakf2hu5y" path="res://assets/fontes/pixel_operator/PixelOperator8.ttf" id="5_4crdb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jfujm"]
 shader = ExtResource("1_sthd7")
 
 [node name="quiz_end" type="Node2D"]
+script = ExtResource("1_43g7a")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -28,10 +31,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -560.0
-offset_top = -169.0
-offset_right = 560.0
-offset_bottom = -105.0
+offset_left = -552.0
+offset_top = -278.0
+offset_right = 568.0
+offset_bottom = -214.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_jfujm")
@@ -39,5 +42,33 @@ theme_override_font_sizes/font_size = 64
 text = "OBRIGADO POR JOGAR!"
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(589, 446)
+position = Vector2(596, 292)
+scale = Vector2(0.77512, 0.77512)
 texture = ExtResource("4_nukf3")
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(240, 64)
+offset_left = 293.0
+offset_top = 467.0
+offset_right = 854.0
+offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("5_4crdb")
+theme_override_font_sizes/font_size = 40
+text = "JOGAR NOVAMENTE"
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(240, 64)
+offset_left = 298.0
+offset_top = 554.0
+offset_right = 859.0
+offset_bottom = 618.0
+theme_override_fonts/font = ExtResource("5_4crdb")
+theme_override_font_sizes/font_size = 40
+text = "VOLTAR AO MENU"
+
+[connection signal="mouse_entered" from="CanvasLayer/Button" to="." method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Button" to="." method="_on_button_2_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/Button2" to="." method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Button2" to="." method="_on_button_2_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]

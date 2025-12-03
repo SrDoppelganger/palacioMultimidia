@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvusva6yf6fe0"]
 
 [ext_resource type="Script" uid="uid://c7361qhfp0rsk" path="res://Scripts/soundtrack.gd" id="1_v18me"]
-[ext_resource type="AudioStream" uid="uid://c8vhqgsujryer" path="res://assets/musicas/placeholder_BGM.ogg" id="2_ahp3e"]
+[ext_resource type="AudioStream" uid="uid://1y0pmc32rahl" path="res://assets/audios/Museu.ogg" id="2_ahp3e"]
 
 [node name="Soundtrack" type="Node"]
 script = ExtResource("1_v18me")
@@ -9,5 +9,6 @@ script = ExtResource("1_v18me")
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("2_ahp3e")
+volume_db = -10.0
 bus = &"Music"
-parameters/looping = false
+parameters/looping = true

@@ -1,14 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://ds7jmsqe1g8nc"]
+[gd_scene load_steps=14 format=3 uid="uid://ds7jmsqe1g8nc"]
 
 [ext_resource type="Script" uid="uid://b2prftfe5brsg" path="res://Scripts/sala_d_1.gd" id="1_p06ik"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_yq8vs"]
 [ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="3_mfbku"]
+[ext_resource type="Texture2D" uid="uid://ddrcin238jt4d" path="res://assets/animaking1.jpg" id="4_37cj1"]
 [ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="4_idmcg"]
 [ext_resource type="Texture2D" uid="uid://dbvjwx3kikjre" path="res://assets/left_door1.png" id="4_mfbku"]
 [ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="4_od6sg"]
+[ext_resource type="Texture2D" uid="uid://ctktkj3vg58ow" path="res://assets/animaking 2.jpg" id="5_a6joj"]
 [ext_resource type="Texture2D" uid="uid://bx8nnfl7frjdj" path="res://assets/left_door2.png" id="5_od6sg"]
+[ext_resource type="Texture2D" uid="uid://cc877gkgnybrh" path="res://assets/audio_icon.png" id="5_p3nf0"]
 [ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_idmcg"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="9_gluyj"]
+[ext_resource type="AudioStream" uid="uid://cbaove4n8biym" path="res://assets/audios/sala 4.ogg" id="11_gluyj"]
 
 [node name="salaD1" type="Node2D"]
 script = ExtResource("1_p06ik")
@@ -24,18 +28,37 @@ grow_vertical = 2
 texture = ExtResource("2_yq8vs")
 
 [node name="quadro1" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(803, 231)
-scale = Vector2(0.8, 0.8)
+position = Vector2(846, 214)
+scale = Vector2(1.05732, 0.8)
 texture = ExtResource("8_idmcg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/quadro1"]
+position = Vector2(1.9375, 13.5625)
+scale = Vector2(0.259888, 0.454429)
+texture = ExtResource("4_37cj1")
 
 [node name="quadro2" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(336, 236)
-scale = Vector2(0.8, 0.8)
+position = Vector2(331, 217)
+scale = Vector2(1.24408, 0.8)
 texture = ExtResource("8_idmcg")
 
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/quadro2"]
+position = Vector2(3.25478, 12.5)
+scale = Vector2(0.208015, 0.427083)
+texture = ExtResource("5_a6joj")
+
 [node name="pilar" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(576, 480)
+position = Vector2(610, 475)
 texture = ExtResource("4_idmcg")
+
+[node name="audio" type="TextureButton" parent="CanvasLayer/pilar"]
+offset_left = -88.0
+offset_top = -169.0
+offset_right = 452.0
+offset_bottom = 331.0
+scale = Vector2(0.3, 0.3)
+toggle_mode = true
+texture_normal = ExtResource("5_p3nf0")
 
 [node name="continuar" type="TextureButton" parent="CanvasLayer"]
 anchors_preset = -1
@@ -72,6 +95,14 @@ offset_right = -22.0
 offset_bottom = 76.0
 grow_horizontal = 0
 
+[node name="audio" type="Node" parent="."]
+
+[node name="audio" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("11_gluyj")
+
+[connection signal="mouse_entered" from="CanvasLayer/pilar/audio" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/pilar/audio" to="." method="_on_mouse_exited"]
+[connection signal="toggled" from="CanvasLayer/pilar/audio" to="." method="_on_music_toggled"]
 [connection signal="mouse_entered" from="CanvasLayer/continuar" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/continuar" to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/continuar" to="." method="_on_continuar_pressed"]

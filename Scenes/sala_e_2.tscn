@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://xtlj7osanapq"]
+[gd_scene load_steps=13 format=3 uid="uid://xtlj7osanapq"]
 
 [ext_resource type="Script" uid="uid://dpf2f5j24hucu" path="res://Scripts/sala_e_2.gd" id="1_8iquw"]
 [ext_resource type="Texture2D" uid="uid://1ni5f36dg7dc" path="res://assets/web-memories-1x.png" id="2_sjp7c"]
 [ext_resource type="Texture2D" uid="uid://yxqcxy5sagb7" path="res://assets/right_door1.png" id="5_sjp7c"]
-[ext_resource type="Texture2D" uid="uid://cuyq5fjukp64a" path="res://assets/NOTE.png" id="6_jgq17"]
+[ext_resource type="Texture2D" uid="uid://cc877gkgnybrh" path="res://assets/audio_icon.png" id="6_tmpwv"]
 [ext_resource type="Texture2D" uid="uid://b5o701s3sc4d5" path="res://assets/right_door2.png" id="6_xmbx1"]
 [ext_resource type="PackedScene" uid="uid://clhwy4s25q58h" path="res://Scenes/mute_button.tscn" id="7_hlinm"]
 [ext_resource type="Texture2D" uid="uid://7a2tu1areig6" path="res://assets/pilar.png" id="7_jgq17"]
 [ext_resource type="Texture2D" uid="uid://cg8o35xdor2ii" path="res://assets/quadro_peq.png" id="8_6oh3s"]
 [ext_resource type="VideoStream" uid="uid://bual58t026qk2" path="res://assets/animacoes/Animação-2.ogv" id="8_6xvro"]
-[ext_resource type="VideoStream" uid="uid://bxgcg8vflip3j" path="res://assets/animacoes/Cópia-de-Running-cycle.ogv" id="9_tmpwv"]
+[ext_resource type="VideoStream" uid="uid://bxgcg8vflip3j" path="res://Cópia-de-Running-cycle.ogv" id="9_tmpwv"]
 [ext_resource type="VideoStream" uid="uid://dy15e8w8wiq8n" path="res://assets/animacoes/WhatsApp-Video-2025-11-26-at-10.16.46.ogv" id="10_tmpwv"]
+[ext_resource type="AudioStream" uid="uid://bd5lywni5a6sp" path="res://assets/audios/sala 1.ogg" id="12_8plj6"]
 
 [node name="salaE2" type="Node2D"]
 script = ExtResource("1_8iquw")
@@ -45,12 +46,13 @@ scale = Vector2(1.3125, 1.23828)
 texture = ExtResource("7_jgq17")
 
 [node name="music" type="TextureButton" parent="CanvasLayer/pilar2"]
-offset_left = -39.619
-offset_top = -163.129
-offset_right = 210.381
-offset_bottom = 236.871
+offset_left = -86.0952
+offset_top = -171.205
+offset_right = 453.905
+offset_bottom = 328.795
 scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("6_jgq17")
+toggle_mode = true
+texture_normal = ExtResource("6_tmpwv")
 
 [node name="quadro1" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(246, 268)
@@ -103,4 +105,12 @@ offset_top = 20.0
 offset_right = 1130.0
 offset_bottom = 76.0
 
+[node name="audio" type="Node" parent="."]
+
+[node name="audio" type="AudioStreamPlayer" parent="audio"]
+stream = ExtResource("12_8plj6")
+
 [connection signal="pressed" from="CanvasLayer/salaE1" to="." method="_on_sala_e_1_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/pilar2/music" to="." method="_on_music_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/pilar2/music" to="." method="_on_music_mouse_exited"]
+[connection signal="toggled" from="CanvasLayer/pilar2/music" to="." method="_on_music_toggled"]

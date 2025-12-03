@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://pbky81gmtoqe"
+path="res://.godot/imported/sala 3 .5.ogg-203abcd2446b2f49835520a1e840cbbd.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audios/sala 3 .5.ogg"
+dest_files=["res://.godot/imported/sala 3 .5.ogg-203abcd2446b2f49835520a1e840cbbd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
