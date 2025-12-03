@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bjje7c0h8tbq7"]
+[gd_scene load_steps=31 format=3 uid="uid://bjje7c0h8tbq7"]
 
 [ext_resource type="Script" uid="uid://bvwmn3obju3kr" path="res://Scripts/quiz.gd" id="1_bu0r6"]
 [ext_resource type="Shader" uid="uid://dusvyrl0r2h53" path="res://Scenes/quiz.gdshader" id="1_fdxuh"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://brm1u78wvt566" path="res://Scripts/questões.gd" id="2_e6bo8"]
 [ext_resource type="Texture2D" uid="uid://dsc44csnt3xex" path="res://assets/BG/quiz_bg3.png" id="2_fdxuh"]
 [ext_resource type="FontFile" uid="uid://bpn2unib34sxp" path="res://assets/fontes/pixel_operator/PixelOperator.ttf" id="5_pkwmv"]
+[ext_resource type="FontFile" uid="uid://c2eefbhm14asl" path="res://assets/fontes/pixel_operator/PixelOperator-Bold.ttf" id="6_qbquq"]
 [ext_resource type="Texture2D" uid="uid://cqyvmckj0okc8" path="res://assets/choice-button-neutral.png" id="6_schtj"]
 [ext_resource type="Texture2D" uid="uid://blpwqbnsglgcy" path="res://assets/choice-button-act.png" id="7_84grc"]
 [ext_resource type="FontFile" uid="uid://bhdjb8m4y2n63" path="res://assets/fontes/pixel_operator/PixelOperatorHB.ttf" id="8_5od8v"]
@@ -151,32 +152,34 @@ anchor_bottom = 1.0
 offset_left = 15.0
 offset_top = 13.0
 offset_right = -17.0
-offset_bottom = -159.0
+offset_bottom = -314.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("5_pkwmv")
+theme_override_fonts/font = ExtResource("6_qbquq")
 theme_override_font_sizes/font_size = 32
 text = "LOREM IPSUM"
+autowrap_mode = 2
 
 [node name="alternativas" type="Label" parent="CanvasLayer/Background/question"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = 284.0
-offset_right = -17.0
-offset_bottom = -18.0
+offset_left = 10.0
+offset_top = 157.0
+offset_right = -23.0
+offset_bottom = -145.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_pkwmv")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 24
 text = "A)
 B)
 C)
 D)"
+autowrap_mode = 2
 
 [node name="A" type="Button" parent="CanvasLayer/Background"]
 layout_mode = 1
